@@ -19,7 +19,8 @@ class CashRegister:
     if self.discount > 0:
       """I had to adjust the discount because the test in cash_register_test.py is bad."""
       """Author has a $1000 purchase minus a $20 discount equaling $800"""
-      self.total -= (self.discount * 10)
+      disc = (self.discount / 100 ) * self.total
+      self.total -= disc
       print("After the discount, the total comes to $800.")
     else:
       print("There is no discount to apply.")
